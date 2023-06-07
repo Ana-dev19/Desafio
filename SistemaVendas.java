@@ -227,10 +227,10 @@ public void pesquisarComprasPorClientes(String cpf) {
 
                     System.out.println("Digite o CPF do cliente:");
                     String cpfCliente = scanner.next();
-
-                    String emailCliente = scanner.next();
+                    
 
                     System.out.println("Digite o email do cliente");
+                    String emailCliente = scanner.next();
 
                     //Objeto criado da classe Cliente com os dados lidos
                     Cliente cliente = new Cliente(nomeCliente, cpfCliente, emailCliente);
@@ -248,7 +248,10 @@ public void pesquisarComprasPorClientes(String cpf) {
                 case 2:
                     System.out.println("Digite o nome do vendedor:");
                     String nomeVendedor = scanner.next();
+                    
+                    System.out.println("Digite o CPF do vendedor:");
                     String cpfVendedor = scanner.next();
+                    
                     System.out.println("Digite o email do vendedor:");
                     String emailVendedor = scanner.next();
 
@@ -264,8 +267,10 @@ public void pesquisarComprasPorClientes(String cpf) {
                 case 3:
                     System.out.println("Digite o codigo do produto:");
                     String codigoProduto = scanner.next();
+                    
                     System.out.println("Digite o nome do produto:");
                     String nomeProduto = scanner.next();
+                    
                     System.out.println("Digite o preço do produto");
                     double precoProduto = scanner.nextDouble();
 
