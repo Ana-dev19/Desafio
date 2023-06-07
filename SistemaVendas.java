@@ -198,7 +198,7 @@ public void pesquisarComprasPorClientes(String cpf) {
         int opção = 0;
         // laço de repetição para repetir o menu até o usuario escolher sair
         do {
-            System.out.println("Sistema de vendas");
+            System.out.println("==========Sistema de vendas==========");
             System.out.println("Escolha uma opção:");
             System.out.println("1 - Cadastrar cliente");
             System.out.println("2 - Cadastrar vendedor");
@@ -210,7 +210,7 @@ public void pesquisarComprasPorClientes(String cpf) {
             System.out.println("8 - Listar vendas");
             System.out.println("9 - Pesquisar compras por cliente");
             System.out.println("10 - Pesquisar vendas por vendedor");
-            System.out.println("10 - Pesquisar vendas por vendedor");
+            System.out.println("----------------------------------------");
             System.out.println("0 - Sair");
 
             // le a opção digitada pelo usuario
