@@ -19,7 +19,9 @@ public class Produto {
         // Atribui os valores aos atributos
         this.codigo = codigo;
         this.nome = nome;
+        this.preço = preço;
     }
+   
     // Método para os atributos
     public String getCodigo() {
         return codigo;
