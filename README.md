@@ -1,5 +1,4 @@
 # Desafio
-Sistema de Vendas
 
 # Sistema de Registro de Vendas
 
