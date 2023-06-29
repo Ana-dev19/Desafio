@@ -1,28 +1,22 @@
 public class Produto {
-    // Atributos do produto
     private String codigo;
     private String nome;
     private double preço;
 
-    // Construtor do produto
     public Produto(String codigo, String nome, double preço) {
-        // Valida os dados do produto
         if (codigo == null || codigo.isEmpty()) {
-            throw new IllegalArgumentException("Codigo inválido");
+        throw new IllegalArgumentException("Codigo invalido");
         }
         if (nome == null || nome.isEmpty()) {
-        throw new IllegalArgumentException("Nome inválido");
+            throw new IllegalArgumentException("Nome invalido");
         }
         if (preço <=0) {
-            throw new IllegalArgumentException("Preço inválido");
+            throw new IllegalArgumentException("Preço invalido");
         }
-        // Atribui os valores aos atributos
         this.codigo = codigo;
         this.nome = nome;
         this.preço = preço;
     }
-   
-    // Método para os atributos
     public String getCodigo() {
         return codigo;
     }
@@ -32,14 +26,13 @@ public class Produto {
         }
         this.codigo = codigo;
     }
-
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         if (nome == null || nome.isEmpty()) {
-            throw new IllegalArgumentException("Nome inválido");
+            throw new IllegalArgumentException("Nome invalido");
         }
         this.nome = nome;
     }
@@ -47,29 +40,28 @@ public class Produto {
     public double getPreço() {
         return preço;
     }
+
     public void setPreço(double preço) {
-        if(preço <=0){
-            throw new IllegalArgumentException("Preço inválidp");
+        if (preço <=0) {
+            throw new IllegalArgumentException("Preoço invalido");
         }
         this.preço = preço;
     }
-    // Método para gerar o hash code do produto baseado no seu codigo
     @Override
     public int hashCode() {
         return codigo.hashCode();
     }
-    // Método para comparar dois produtos baseado no seu codigo
+
     @Override
     public boolean equals(Object object) {
-        if (object instanceof  Produto) {
+        if (object instanceof Produto) {
             Produto outro = (Produto) object;
-            return this.codigo.equals(outro.codigo);
-        }
+                return this.codigo.equals(outro.codigo);
+            }
         return false;
-    }
-    // Método para retornar uma representação do produto
-    @Override
+        }
+        @Override
     public String toString() {
-        return "Produto: " + nome + " - Código: " + codigo + " - Preço: R$ " + preço;
+        return "Produto: " + nome + " - Codigo: " + codigo + " - Preço: R$" + preço;
     }
 }

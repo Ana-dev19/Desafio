@@ -210,8 +210,9 @@ public void pesquisarComprasPorClientes(String cpf) {
             System.out.println("8 - Listar vendas");
             System.out.println("9 - Pesquisar compras por cliente");
             System.out.println("10 - Pesquisar vendas por vendedor");
-            System.out.println("----------------------------------------");
             System.out.println("0 - Sair");
+            System.out.println("----------------------------------------");
+
 
             // le a opção digitada pelo usuario
             opção = scanner.nextInt();
@@ -221,16 +222,16 @@ public void pesquisarComprasPorClientes(String cpf) {
             switch (opção){
                 // Cadastrar cliente
                 case 1:
-                    // le os daodos do cleinte
+                    // le os dados do cleinte
                     System.out.println("Digite o nome do cliente");
                     String nomeCliente = scanner.next();
 
                     System.out.println("Digite o CPF do cliente:");
                     String cpfCliente = scanner.next();
-                    
 
                     System.out.println("Digite o email do cliente");
                     String emailCliente = scanner.next();
+
 
                     //Objeto criado da classe Cliente com os dados lidos
                     Cliente cliente = new Cliente(nomeCliente, cpfCliente, emailCliente);
@@ -239,7 +240,7 @@ public void pesquisarComprasPorClientes(String cpf) {
 
                     try {
                         cadastrarCliente(cliente);
-                        System.out.println("Cliente cadastrado com sucesso");
+                        System.out.println("Cliente cadastrado com sucesso!!!");
                     } catch (IllegalArgumentException e) {
                         //Se ocorrer uma exceção, imprime a mensagem de erro
                         System.out.println(e.getMessage());
@@ -248,10 +249,10 @@ public void pesquisarComprasPorClientes(String cpf) {
                 case 2:
                     System.out.println("Digite o nome do vendedor:");
                     String nomeVendedor = scanner.next();
-                    
+
                     System.out.println("Digite o CPF do vendedor:");
                     String cpfVendedor = scanner.next();
-                    
+
                     System.out.println("Digite o email do vendedor:");
                     String emailVendedor = scanner.next();
 
@@ -259,7 +260,7 @@ public void pesquisarComprasPorClientes(String cpf) {
 
                     try {
                         cadastrarVendedor(vendedor);
-                        System.out.println("Vendedor cadastrado com sucesso");
+                        System.out.println("Vendedor cadastrado com sucesso!!!");
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
                     }
@@ -267,18 +268,18 @@ public void pesquisarComprasPorClientes(String cpf) {
                 case 3:
                     System.out.println("Digite o codigo do produto:");
                     String codigoProduto = scanner.next();
-                    
+
                     System.out.println("Digite o nome do produto:");
                     String nomeProduto = scanner.next();
-                    
+
                     System.out.println("Digite o preço do produto");
                     double precoProduto = scanner.nextDouble();
 
-                    Produto produto = new Produto(codigoProduto, nomeProduto, precoProduto);
+                    Produto produto = new Produto(codigoProduto, nomeProduto, (int) precoProduto);
 
                     try {
                         cadastrarProduto(produto);
-                        System.out.println("Produto cadastrado com sucesso");
+                        System.out.println("Produto cadastrado com sucesso!!!");
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
                     }
@@ -286,12 +287,16 @@ public void pesquisarComprasPorClientes(String cpf) {
                 case 4:
                     System.out.println("Digite o CPF do cliente da venda:");
                     String cpfClienteVenda = scanner.next();
+
                     System.out.println("Digite o email do vendedor da venda:");
                     String emailVendedorVenda = scanner.next();
+
                     System.out.println("Digite o codigo do produto da venda:");
                     String codigoProdutoVenda = scanner.next();
-                    System.out.println("Digite a quantidade dp produto da venda:");
+
+                    System.out.println("Digite a quantidade do produto da venda:");
                     int quantidadeProdutoVenda = scanner.nextInt();
+
                     System.out.println("Digite a data da venda:");
                     String dataVenda = scanner.next();
 
@@ -325,7 +330,7 @@ public void pesquisarComprasPorClientes(String cpf) {
 
                     try {
                         cadastrarVenda(venda);
-                        System.out.println("Venda cadastrada com sucesso");
+                        System.out.println("Venda cadastrada com sucesso!!!");
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
                     }
@@ -363,7 +368,7 @@ public void pesquisarComprasPorClientes(String cpf) {
                     }
                     break;
                 case 0:
-                    System.out.println("Obrigada por usar o sistema de vendas");
+                    System.out.println("Obrigada por usar o sistema de vendas!!!");
                     break;
                 default:
                     System.out.println("Opção inválida");

@@ -1,3 +1,4 @@
+import java.util.Objects;
 
 public class Venda {
 
@@ -18,9 +19,6 @@ public class Venda {
         if (cliente == null) {
             throw new IllegalArgumentException("Cliente inválido");
         }
-        if (produto == null) {
-            throw new IllegalArgumentException("Produto inválido");
-        }
         if (quantidade <=0) {
             throw new IllegalArgumentException("Quantidade inválida");
         }
@@ -32,7 +30,7 @@ public class Venda {
         this.cliente = cliente;
         this.produto = produto;
         this.quantidade = quantidade;
-        this.valorTotal = produto.getPreço() * quantidade;
+        this.valorTotal = getValorTotal();
 
         // Calcula o valor total da venda
         this.data = data;
@@ -66,7 +64,7 @@ public class Venda {
             throw new IllegalArgumentException("Produto inválido");
         }
         this.produto = produto;
-        this.valorTotal = produto.getPreço() * quantidade;
+        this.valorTotal = getValorTotal();
         // Atualiza o valor total da venda
     }
 
@@ -79,7 +77,7 @@ public class Venda {
             throw new IllegalArgumentException("Quantidade inválida");
         }
         this.quantidade = quantidade;
-        this.valorTotal = produto.getPreço() * quantidade;
+        this.valorTotal = getValorTotal();
     }
     public double getValorTotal() {
         return valorTotal;
